@@ -2,6 +2,9 @@
 
 Et lokalt RAG-system (Retrieval-Augmented Generation) der lader dig stille spørgsmål til PET's offentlige dokumenter uden at sende data til eksterne servere. Bygget med Ollama, HuggingFace og ChromaDB.
 
+<img width="1710" height="996" alt="image" src="https://github.com/user-attachments/assets/99887ac3-8e6a-4f33-bb0e-49397bbd8e66" />
+
+
 ## Stack
 
 | Komponent | Valg | Beskrivelse |
