@@ -1,6 +1,6 @@
-# Lokal RAG CLI — PET Efterretningsanalyse
+# Lokal RAG CLI — Offentlige Myndighedsdokumenter
 
-Et lokalt RAG-system (Retrieval-Augmented Generation) der lader dig stille spørgsmål til PET's offentlige dokumenter uden at sende data til eksterne servere. Bygget med Ollama, HuggingFace og ChromaDB.
+Et lokalt RAG-system (Retrieval-Augmented Generation) der lader dig stille spørgsmål til offentlige myndighedsdokumenter uden at sende data til eksterne servere. Bygget med Ollama, HuggingFace og ChromaDB.
 
 <img width="1710" height="996" alt="image" src="https://github.com/user-attachments/assets/99887ac3-8e6a-4f33-bb0e-49397bbd8e66" />
 
@@ -20,7 +20,7 @@ Et lokalt RAG-system (Retrieval-Augmented Generation) der lader dig stille spør
 
 ## Trin 1 — Konfiguration af lokal LLM med Ollama
 
-Ollama håndterer automatisk model management og GPU-detektion. Grundmodellen er llama3.2, men den er konfigureret med en custom Modelfile til efterretningsanalytisk arbejde.
+Ollama håndterer automatisk model management og GPU-detektion. Grundmodellen er llama3.2, men den er konfigureret med en custom Modelfile til specialiseret vidensudtræk af offentlige dokumenter.
 
 ### Installation
 ```bash
@@ -73,8 +73,8 @@ Definerer modellens kontekstvindue — hvor meget tekst den kan "se" på én gan
 
 ```bash
 # Byg og start den tilpassede model
-ollama create pet-analyst -f Modelfile
-ollama run pet-analyst
+ollama create intel-analyst -f Modelfile
+ollama run intel-analyst
 ```
 
 ---
@@ -83,7 +83,7 @@ ollama run pet-analyst
 
 ### Dokumenter
 
-Systemet er indekseret på følgende offentligt tilgængelige dokumenter fra PET og Rigspolitiet:
+Systemet er indekseret på følgende offentligt tilgængelige myndighedsdokumenter:
 
 - Vurdering af terrortruslen mod Danmark 2023, 2024, 2025
 - Vurdering af spionagetruslen mod Danmark 2023
@@ -93,8 +93,8 @@ Systemet er indekseret på følgende offentligt tilgængelige dokumenter fra PET
 
 ### Installation
 ```bash
-git clone https://github.com/nsonderborg/pet-rag
-cd pet-rag
+git clone https://github.com/nsonderborg/intel-rag
+cd intel-rag
 ./setup.sh
 ```
 
