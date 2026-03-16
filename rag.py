@@ -19,7 +19,7 @@ DOCS_DIR = Path(__file__).parent / "docs"
 CHROMA_DIR = Path(__file__).parent / ".chroma"
 COLLECTION_NAME = "rag_docs"
 EMBEDDING_MODEL = "intfloat/multilingual-e5-small"
-LLM_MODEL = "pet-analyst"
+LLM_MODEL = "intel-analyst"
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 150
 TOP_K = 4
@@ -172,7 +172,7 @@ def ask(query: str, collection: chromadb.Collection, model: SentenceTransformer)
             console.print(token, end="", markup=False)
     except Exception as e:
         console.print(f"\n[red]Fejl ved kald til Ollama: {e}[/red]")
-        console.print("[yellow]Kontroller at Ollama kører og at modellen 'pet-analyst' er tilgængelig.[/yellow]")
+        console.print("[yellow]Kontroller at Ollama kører og at modellen 'intel-analyst' er tilgængelig.[/yellow]")
         return
 
     console.print("\n")
