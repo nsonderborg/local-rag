@@ -44,7 +44,7 @@ if query:
             st.write_stream(token_stream())
         except Exception as e:
             st.error(f"Fejl ved kald til Ollama: {e}")
-            st.info("Kontroller at Ollama kører og at modellen 'pet-analyst' er tilgængelig.")
+            st.info("Kontroller at Ollama kører og at modellen 'intel-analyst' er tilgængelig.")
             st.stop()
 
         if chunks:
